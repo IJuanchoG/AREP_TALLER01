@@ -32,9 +32,11 @@ Con el fin de correr el programa ejecute la siguiente instrucción:
  Encontrará los siguientes resultados:
  
 Información de la lista encadenada creada de ejemplo.
+
  <img width="796" alt="LinkedLinkExample" src="https://user-images.githubusercontent.com/49318314/90288675-fdc3e080-de3f-11ea-856a-19bfed8bea59.png">
  
  Igualmente, los valores calculados por parte de la sección dinámica.
+ 
  <img width="165" alt="Desviacion" src="https://user-images.githubusercontent.com/49318314/90288600-d240f600-de3f-11ea-9111-1e5e5edcc77e.png">
 
 ### Prerequisitos.
@@ -57,12 +59,8 @@ si necesita instalar algunos de los servicios mencionados puede encontrarlos aqu
 
 Ejemplo de ejecución:
 
-<img width="461" alt="mvnpackage" src="https://user-images.githubusercontent.com/49318314/90283933-b6852200-de36-11ea-9c88-854fa02b6405.png">
 
-<<<<<<< HEAD
 <img width="461" alt="mvnpackage" src="https://user-images.githubusercontent.com/49318314/90283933-b6852200-de36-11ea-9c88-854fa02b6405.png">
-=======
->>>>>>> e18bac5f5ff5321a38d0724e91a8929cca219a0c
 
 
 
@@ -123,4 +121,3 @@ Como otro ejemplo tememos este código en el que se comprueba que la adición de
 ## License
 
 Este proyecto es de libre uso y distribución, para más detalles vea el archivo [LICENSE.md](LICENSE.md).
-

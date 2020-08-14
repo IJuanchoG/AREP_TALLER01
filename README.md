@@ -44,8 +44,8 @@ si necesita instalar algunos de los servicios mencionados puede encontrarlos aqu
 
 Ejemplo de ejecución:
 
+<img width="461" alt="mvnpackage" src="https://user-images.githubusercontent.com/49318314/90283933-b6852200-de36-11ea-9c88-854fa02b6405.png">
 
-![MNVPackage](C:\Users\USER\Desktop\AREP\StatisticCalculator\MyStatCal\src\site\resources\images\mvnpackage.png)
 
 
 
@@ -57,7 +57,7 @@ mvn surefire:test
 
 como resultado se ve lo siguiente:
 
-![Test](C:\Users\USER\Desktop\AREP\StatisticCalculator\MyStatCal\src\site\resources\images\pruebas.png)
+<img width="634" alt="pruebas" src="https://user-images.githubusercontent.com/49318314/90284000-d61c4a80-de36-11ea-83cd-441c4ecdb6c5.png">
 
 
 Estas pruebas son automáticas, si desea realizar más pruebas puede hacerlo manualmente o agregando más cualquiera de los archivos encontrados en la ruta **src\test\java\edu\eci\arep\msc\mystatcal**

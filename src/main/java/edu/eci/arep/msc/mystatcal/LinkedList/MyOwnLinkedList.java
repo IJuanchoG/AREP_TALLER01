@@ -4,6 +4,10 @@ import edu.eci.arep.msc.mystatcal.LinkedList.Nodes.Node;
 import edu.eci.arep.msc.mystatcal.Persistence.Exceptions.MyOwnLinkedListException;
 import edu.eci.arep.msc.mystatcal.Persistence.Exceptions.NodesException;
 
+/**
+ * @author Juan Carlos Garcia Garzon
+ * Construccion del sistema de comunicacion de la LinkedList
+ */
 public class MyOwnLinkedList {
     private String dataType;
     private Node head;
@@ -16,12 +20,21 @@ public class MyOwnLinkedList {
         start(data,dataType);
     }
 
+    /**
+     * Agrega un nuevo nodo a la LinkedList, lo conecta con los nodos subyacentes
+     * @param data informacion a almancenar en el nodo
+     * @param dataType tipo de informacion a almacenar
+     * @return respuesta a exito en la adicion
+     * @throws NodesException ausencia de implementaciones existentes
+     * @throws MyOwnLinkedListException tipo de data no soportada o no implementada
+     */
     public boolean addNode(String data, String dataType) throws NodesException, MyOwnLinkedListException {
-        if(head == null && tail == null) {
+        if((head == null && this.dataType != dataType) ) { throw new MyOwnLinkedListException(MyOwnLinkedListException.INVALID_DATATYPE);  }
+        if(head == null && tail == null && this.dataType == dataType) {
             start(data,dataType);
             return true;
         }
-        if(dataType != tail.getNodeType() || tail.getRightNode() != null) {throw new MyOwnLinkedListException(MyOwnLinkedListException.INVALID_DATATYPE);}
+        if(dataType != tail.getNodeType()) {throw new MyOwnLinkedListException(MyOwnLinkedListException.INVALID_DATATYPE);}
         Node aux = Node.BuildNode(data, dataType, tail);
         if (tail.setRightNode(aux)) {
             tail =  aux;
@@ -31,10 +44,13 @@ public class MyOwnLinkedList {
         return false;
     }
 
+    /**
+     * Elimina el ultimo nodo puesto, es posible realizar implementaciones para eliminar de diferentes maneras
+     * @return Nodo removido
+     * @throws NodesException LinkedList vacia
+     */
     public Node removeLastNode() throws NodesException {
-        if (head == null && tail == null){
-            System.out.println("No hay Nodos");
-            return null;
+        if (head == null && tail == null){ throw new NodesException(NodesException.LINKEDLIST_EMPTY);
         };
         if(head.equals(tail)) {
             Node aux = head;
@@ -51,34 +67,71 @@ public class MyOwnLinkedList {
         return aux;
     }
 
+    /**
+     * Muestra el nodo siguiente al posicionado
+     * @param node Nodo desde el cual se quiere buscar la siguiente posicion
+     * @return Nodo en siguiente posicion
+     */
     public Node nextNode(Node node){
         return node.getRightNode() ;
     }
 
+    /**
+     * Muestra el nodo previo al que se ha posicionado
+     * @param node Nodo desde el cual se quiere buscar la posicion previa
+     * @return Nodo en posicion previa
+     */
     public Node previousNode(Node node){
         return node.getLeftNode() ;
     }
 
+    /**
+     * Muestra el nodo HEAD de la linkedList
+     * @return HEAD De la linkedlist
+     */
     public Node priorNode(){
         return head;
     }
 
+    /**
+     * Muestra el nodo TAIL de la linkedList
+     * @return TAIL de la linkedlist
+     */
     public Node lastNode(){
         return tail;
     }
 
+    /**
+     * Muestra el tipo de informacion almacenada en la LinkedList
+     * @return tipo de informacion
+     */
     public String getDataType() {
         return dataType;
     }
 
+    /**
+     * Asigna un nuevo tipo de informacion a almacenar
+     * @param dataType tipo de informacion a almacenar
+     */
     public void setDataType(String dataType) {
         this.dataType = dataType;
     }
 
+
+    /**
+     * Presenta el tamanho presentado en la linkedList
+     * @return tamanho de la linkedlist
+     */
     public int getSize() {
         return size;
     }
 
+    /**
+     * Realiza la inializacion del primer nodo de la lista
+     * @param data informacion que se quiere guardar
+     * @param dataType tipo de informacion que se quiere guardar
+     * @throws NodesException Excepciones a metodos no implementados aun
+     */
     private void start(String data, String dataType) throws NodesException {
         Node aux = Node.BuildNode(data,dataType, null);
         this.dataType = dataType;
@@ -88,7 +141,10 @@ public class MyOwnLinkedList {
     }
 
 
-
+    /**
+     * Representa la linkedList de una manera amigable y sencilla
+     * @return LinkedList en formato entendible
+     */
     @Override
     public String toString() {
         Node aux  = head;

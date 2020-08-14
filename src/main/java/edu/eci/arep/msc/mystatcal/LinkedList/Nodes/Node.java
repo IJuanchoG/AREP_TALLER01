@@ -15,10 +15,10 @@ public interface Node {
                 return new DoubleNode(Double.valueOf(data), null,(DoubleNode) tail);
             case("integer"):
                 if (tail == null) return new IntegerNode(Integer.valueOf(data), null);
-                return new IntegerNode(Integer.valueOf(data), null);
+                return new IntegerNode(Integer.valueOf(data), null, (IntegerNode) tail);
             case("string"):
                 if (tail == null) return new StringNode(String.valueOf(data), null);
-                return new StringNode(String.valueOf(data), null);
+                return new StringNode(String.valueOf(data), null, (StringNode) tail);
             default:
                 throw new NodesException(NodesException.INCORRECT_DATATYPE);
         }

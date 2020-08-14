@@ -6,7 +6,8 @@ import edu.eci.arep.msc.mystatcal.Persistence.Exceptions.NodesException;
 import edu.eci.arep.msc.mystatcal.StatCal.StatCalculator;
 
 /**
- * Hello world!
+ * Lista encadadenada propuesta por
+ * @author Juan Carlos Garcia
  *
  */
 public class App 
@@ -27,8 +28,12 @@ public class App
         //LlenarListaCaso2();
         MostrarLista();
         CalcularDesviacion();
+        CalcularDesviacionRedondeada();
     }
 
+    /**
+     * Realiza la adicion de informacion en una linkedlist
+     */
     public void LlenarListaCaso1(){
         try {
             linkedList.addNode("160", "double");
@@ -49,6 +54,9 @@ public class App
 
     }
 
+    /**
+     * realiza el llenado de informacion de una linkedlist
+     */
     public void LlenarListaCaso2(){
         try {
             linkedList.addNode("15", "double");
@@ -69,11 +77,32 @@ public class App
 
     }
 
+    /**
+     * Realiza los calculos correspondientes a la informacion contenida en la Linkedlist
+     */
     public void CalcularDesviacion(){
+        System.out.println("Desviacion");
         System.out.println("Sum: "+StatCalculator.Sum(linkedList));
         System.out.println("Mean: "+StatCalculator.Mean(linkedList));
-        System.out.println("Deviation: "+StatCalculator.Deviation(linkedList));
+        System.out.println("Deviation: "+StatCalculator.Deviation(linkedList)+"\n");
     }
+
+    /**
+     * Realiza los calculos correspondientes, pero genera un redondeo de dos digitos a la informacion
+     */
+    public void CalcularDesviacionRedondeada(){
+        System.out.println("Desviacion Redondeada");
+        String sum = StatCalculator.Sum(linkedList);
+        String mean = StatCalculator.Mean(linkedList);
+        String deviation = StatCalculator.Deviation(linkedList);
+        System.out.println("Sum: "+StatCalculator.Round(Double.valueOf(sum),2));
+        System.out.println("Mean: "+StatCalculator.Round(Double.valueOf(mean),2));
+        System.out.println("Deviation: "+StatCalculator.Round(Double.valueOf(deviation),2)+"\n");
+    }
+
+    /**
+     * Muestra la linkedlist
+     */
     public void MostrarLista(){
         System.out.println(linkedList);
     }

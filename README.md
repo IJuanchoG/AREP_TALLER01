@@ -57,8 +57,12 @@ si necesita instalar algunos de los servicios mencionados puede encontrarlos aqu
 
 Ejemplo de ejecución:
 
-
 <img width="461" alt="mvnpackage" src="https://user-images.githubusercontent.com/49318314/90283933-b6852200-de36-11ea-9c88-854fa02b6405.png">
+
+<<<<<<< HEAD
+<img width="461" alt="mvnpackage" src="https://user-images.githubusercontent.com/49318314/90283933-b6852200-de36-11ea-9c88-854fa02b6405.png">
+=======
+>>>>>>> e18bac5f5ff5321a38d0724e91a8929cca219a0c
 
 
 

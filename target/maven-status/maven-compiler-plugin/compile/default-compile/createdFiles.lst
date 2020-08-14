@@ -1,9 +1,0 @@
-edu\eci\arep\msc\mystatcal\LinkedList\Nodes\Impl\DoubleNode.class
-edu\eci\arep\msc\mystatcal\LinkedList\Nodes\Impl\StringNode.class
-edu\eci\arep\msc\mystatcal\Persistence\Exceptions\MyOwnLinkedListException.class
-edu\eci\arep\msc\mystatcal\App.class
-edu\eci\arep\msc\mystatcal\LinkedList\MyOwnLinkedList.class
-edu\eci\arep\msc\mystatcal\Persistence\Exceptions\NodesException.class
-edu\eci\arep\msc\mystatcal\LinkedList\Nodes\Impl\IntegerNode.class
-edu\eci\arep\msc\mystatcal\LinkedList\Nodes\Node.class
-edu\eci\arep\msc\mystatcal\StatCal\StatCalculator.class

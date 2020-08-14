@@ -1,8 +1,10 @@
-# Calculadora de estadistica con LinkedList propia
+# Calculadora de estadistica con Implementación de una Linked List 
 
 Esta libreria está implementada en **JAVA** para la materia de **AREP**
 
-Su principal funcionamiento se centra en una Calculadora de estadistica con las funciones de **promedio** y **desviación media** implementadas, se ha realizado la construcción de una **Linked List** a partir de la teoría conocida y por la cual se generan los calculos necesarios.
+Su principal funcionamiento se centra en una Calculadora de estadistica con las funciones de **promedio** y **desviación media** implementadas, se ha realizado la construcción de una **Linked  List** a partir de la teoría conocida y por la cual se generan los calculos necesarios.
+
+Para conocer mayor información de la implementación del sistema puede ver el documento [INFORME](AREP_TALLER01.pdf)
 
 ## Getting Started
 
@@ -11,8 +13,12 @@ Principalmente se recomienda clonar el repositorio a su computadora, como opció
 ``` git clone https://github.com/IJuanchoG/AREP_TALLER01.git```
 
 La construcción del proyecto se ha realizado por medio de **MAVEN**, es por este motivo que puede ser necesario tener la herramienta en su dispositivo. 
+
 Para compilar el proyecto, ejecute el siguiente comando:
 
+```mvn compile```
+
+posteriormente puede hacer el empaquetado:
 
 ``` mvn package```
 
@@ -21,10 +27,17 @@ se pueden ejecutar desde el IDE de preferencia o desde comandos MVN tales como
 
 ```mvn surefire:test```
 
-si no posee mvn, más adelantes se le comentará donde encontrarlo.
+Con el fin de correr el programa ejecute la siguiente instrucción:
+``` java -cp target\MyStatCal-1.0-SNAPSHOT.jar edu.eci.arep.msc.mystatcal.App ```
+ Encontrará los siguientes resultados:
+ 
+Información de la lista encadenada creada de ejemplo.
+ <img width="796" alt="LinkedLinkExample" src="https://user-images.githubusercontent.com/49318314/90288675-fdc3e080-de3f-11ea-856a-19bfed8bea59.png">
+ 
+ Igualmente, los valores calculados por parte de la sección dinámica.
+ <img width="165" alt="Desviacion" src="https://user-images.githubusercontent.com/49318314/90288600-d240f600-de3f-11ea-9111-1e5e5edcc77e.png">
 
-
-### Prerequisites
+### Prerequisitos.
 
 Es necesario/recomendable que posea las siguientes herramientas:
 
@@ -45,7 +58,7 @@ si necesita instalar algunos de los servicios mencionados puede encontrarlos aqu
 Ejemplo de ejecución:
 
 
-![MNVPackage](C:\Users\USER\Desktop\AREP\StatisticCalculator\MyStatCal\src\site\resources\images\mvnpackage.png)
+<img width="461" alt="mvnpackage" src="https://user-images.githubusercontent.com/49318314/90283933-b6852200-de36-11ea-9c88-854fa02b6405.png">
 
 
 
@@ -57,12 +70,10 @@ mvn surefire:test
 
 como resultado se ve lo siguiente:
 
-![Test](C:\Users\USER\Desktop\AREP\StatisticCalculator\MyStatCal\src\site\resources\images\pruebas.png)
+<img width="634" alt="pruebas" src="https://user-images.githubusercontent.com/49318314/90284000-d61c4a80-de36-11ea-83cd-441c4ecdb6c5.png">
 
 
 Estas pruebas son automáticas, si desea realizar más pruebas puede hacerlo manualmente o agregando más cualquiera de los archivos encontrados en la ruta **src\test\java\edu\eci\arep\msc\mystatcal**
-
-### Break down into end to end tests
 
 Las pruebas fueron realizadas a partir de casos de usos que seguramente se verían envueltos en el funcionamiento del programa. entre ellos tenemos pruebas como:
 
@@ -74,10 +85,6 @@ Las pruebas fueron realizadas a partir de casos de usos que seguramente se verí
     }
 ```
  En la que se evalúa la precisión del sistema para realizar el calculo de una media de manera efectiva.
-
-
-### And coding style tests
-
 Las pruebas buscan de manera efectiva probar el funcionamiento del programa y como se desempeñaría en otros casos de uso
 
 ```
